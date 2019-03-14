@@ -47,9 +47,9 @@ function setCountries()
 	    for (var i in countries)
 		{
 			var id_country = countries[i]['id_country'];
+                        countriesPS[id_country] = [];
 			if (typeof countries[i]['states'] !== 'undefined' && parseInt(countries[i]['contains_states']))
 			{
-				countriesPS[id_country] = [];
 	    		for (var j in countries[i]['states'])
 					countriesPS[parseInt(id_country)].push({'id' : parseInt(countries[i]['states'][j]['id_state']), 'name' : countries[i]['states'][j]['name']});
 			}
